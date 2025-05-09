@@ -38,8 +38,8 @@ const Song = (props) => {
         <div>
           <p className="w-36 lg:w-64 truncate">{song.track.name}</p>
           <p className="w-40 opacity-50 truncate">
-            {song.track.artists.map((name) => (
-              <span>{`${name.name} `}</span>
+            {song.track.artists.map((name, i) => (
+              <span key={i}>{`${name.name} `}</span>
             ))}
           </p>
         </div>
