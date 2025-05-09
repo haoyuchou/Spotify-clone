@@ -73,7 +73,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
-  secret: JWT_SECRET,
+  secret: process.env.NEXT_PUBLIC_JWT_SECRET,
   pages: {
     signIn: "/login",
   },

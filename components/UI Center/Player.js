@@ -78,7 +78,7 @@ const Player = () => {
 
       setVolume(50);
     }
-  }, [spotifyApi, session, currentSongId]);
+  }, [spotifyApi, session, currentSongId, setCurrentSongId, setIsPlaying, , songInfo]);
 
   const debounceVolume = useCallback(
     debounce((volume) => {
@@ -91,7 +91,7 @@ const Player = () => {
     if (volume > 0 && volume < 100){
         debounceVolume(volume);
     }
-  }, [volume])
+  }, [volume, debounceVolume])
 
   return (
     <Fragment>
